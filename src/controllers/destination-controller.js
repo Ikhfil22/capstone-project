@@ -31,13 +31,14 @@ exports.getAllDestinasi= async (req,res, next) =>{
     // controller menambahkan destinasi
     exports.createDestinasi = async (req, res, next) => {
       try {
-          const {nama_wisata, alamat, deskripsi} = req.body;
+          const {name, location, description, image} = req.body;
           
           
           const newData = await Dest.create({        
-            nama_wisata, 
-            alamat, 
-            deskripsi
+            name, 
+            location, 
+            description, 
+            image
             });
             res.status(201).json({
               message: 'Destinasi berhasil ditambahkan',

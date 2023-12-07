@@ -4,8 +4,9 @@ const { Sequelize, DataTypes } = require('sequelize');
 
   const Hotel = sequelize.define('hotel', {
     id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement:true,
     },
     name: {
       type: DataTypes.STRING,
@@ -15,6 +16,22 @@ const { Sequelize, DataTypes } = require('sequelize');
         type: DataTypes.STRING,
         allowNull: false,
     },
+    destination: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    facility: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     createdAt: {
         type: DataTypes.DATE,
         allowNull: false,
@@ -23,10 +40,7 @@ const { Sequelize, DataTypes } = require('sequelize');
       type: DataTypes.DATE,
       allowNull: false,
     },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    
   });
 
   module.exports = Hotel

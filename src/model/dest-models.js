@@ -2,31 +2,36 @@ const sequelize = require('../config/db_config');
 const { DataTypes } = require('sequelize'); 
 
 
-  const Dest = sequelize.define('destinasi', {
+  const Dest = sequelize.define('destination', {
     id: {
-      type: DataTypes.STRING, 
+      type: DataTypes.INTEGER, 
       primaryKey: true,
+      autoIncrement:true,
     },
-    nama_wisata: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    alamat: {
+    location: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    deskripsi: {
+    description: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-  },
- updatedAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-  },
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
+    updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
 
   });
 

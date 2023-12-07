@@ -31,13 +31,16 @@ exports.getAllHotels= async (req,res, next) =>{
     // controller menambahkan hotels
     exports.createHotels = async (req, res, next) => {
       try {
-          const { name,location,image} = req.body;
+          const { name,location, destination, price, facility, image} = req.body;
           
           
           const newData = await Hotel.create({        
-              name,   
-              location,
-              image
+            name, 
+            location, 
+            destination, 
+            price, 
+            facility, 
+            image
             });
             res.status(201).json({
               message: 'Hotel berhasil ditambahkan',
