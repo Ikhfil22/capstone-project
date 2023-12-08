@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+require('dotenv').config()
 
 const app = express();
 const hotelRoutes = require('./src/routes/hotel-routes.js')
@@ -26,5 +26,5 @@ app.use('/',hotelRoutes);
 app.use('/',destinasiRoutes);
 
 app.listen(process.env.PORT,() =>{
-  console.log('connection')
+  console.log('connection on port ' , process.env.PORT)
 })
