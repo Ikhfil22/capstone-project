@@ -1,18 +1,4 @@
 const Dest = require('../model/dest-models.js');
-/*const asyncHandler = require('express-async-handler');
-const path = require('path');
-const multer = require('multer');
-const memoryStorage = multer.diskStorage({
-  destination : './images',
-  filename: (req, file, cb) =>{
-    return cb(null,`${file.fieldname}_${Date.now()}${path.extname(req.file.originalename)}`)
-   }
-})
-
-const upload = multer({storage:memoryStorage});*/
-
-
-
 
 // controller menampilkan destinasi
 exports.getAllDestinasi= async (req,res, next) =>{

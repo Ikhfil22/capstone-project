@@ -7,7 +7,7 @@ require ('dotenv').config();
     dialect: 'mysql',
   });
 
-  sequelize.sync()
+  sequelize.sync() 
   .then(() => {
     console.log('Database and tables synced');
   })
