@@ -21,7 +21,7 @@ exports.getAllDestinasi= async (req,res, next) =>{
           
           
           const newData = await Dest.create({        
-            name, 
+            name,  
             location, 
             description, 
             image

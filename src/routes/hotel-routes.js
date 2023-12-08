@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express') 
 const hotelController = require('../controllers/hotel-controller')
 const routes = express.Router();
 
