@@ -1,6 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require ('dotenv').config();
+<<<<<<< HEAD
+=======
+
+/*const { Sequelize } = require('sequelize');
+const sequelize = require('./src/config/db_config.js');
+const auth = require('./src/routes/authRoutes.js');
+const router = require('./src/routes/authRoutes.js');
+const bodyParser = require('body-parser');
+const multer = require('multer');
+require('dotenv').config();*/
+>>>>>>> d8d29a6d707f0647e45210d11a59ed9e86073beb
 
 
 const app = express();
