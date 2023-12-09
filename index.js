@@ -26,6 +26,6 @@ app.use('/',hotelRoutes);
 app.use('/',destinasiRoutes);
 
 
-app.listen(process.env.DATABASE_PORT,() =>{
-  console.log('connection on port ' , process.env.DATABASE_PORT)
+app.listen(process.env.PORT,() =>{
+  console.log('connection on port ' , process.env.PORT)
 })
