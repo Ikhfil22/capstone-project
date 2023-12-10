@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
 const hotelRoutes = require('./src/routes/hotel-routes.js')
 const destinasiRoutes = require('./src/routes/dest-routes.js')
+
 
 app.use(express.json());
 app.use(bodyParser.json());
@@ -13,6 +15,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '5mb', extended: true }));
 app.use(bodyParser.urlencoded({ extended: true, parameterLimit: 100000, limit:"500mb" }));
 app.use(express.static('images'));
+app.use(cors());
 /*
 // Setel EJS sebagai mesin templat
 app.set('view engine', 'ejs');
